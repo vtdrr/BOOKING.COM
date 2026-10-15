@@ -1,0 +1,139 @@
+.destination-card {
+  background: var(--booking-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid var(--booking-border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--booking-blue);
+}
+
+.destination-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.05);
+}
+
+.destination-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-name {
+  font-size: 1rem;
+  color: var(--booking-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.destination-count {
+  font-size: 0.8125rem;
+}
+
+.benefit-card {
+  background: var(--booking-white);
+  border-radius: 12px;
+  border: 1px solid var(--booking-border);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  border-color: var(--booking-blue);
+  box-shadow: 0 4px 16px rgba(0, 53, 128, 0.1);
+  transform: translateY(-2px);
+}
+
+.benefit-icon {
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  background-color: var(--booking-blue) !important;
+}
+
+.benefit-card:hover .benefit-icon svg {
+  color: var(--booking-white) !important;
+}
+
+.benefit-title {
+  color: var(--booking-dark);
+}
+
+.benefit-desc {
+  line-height: 1.5;
+}
+
+.app-promo-card {
+  border: none;
+  box-shadow: 0 12px 40px rgba(0, 53, 128, 0.3);
+}
+
+.app-promo-card .btn {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.app-promo-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767.98px) {
+  .destinations-grid {
+    margin: 0 -0.75rem;
+  }
+
+  .destinations-grid > [class*='col-'] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .destination-image-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .app-promo-card {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .app-promo-card h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .app-promo-card .lead {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .popular-destinations h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .why-booking h2 {
+    font-size: 1.5rem !important;
+  }
+}

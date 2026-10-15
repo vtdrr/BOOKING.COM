@@ -1,0 +1,126 @@
+.booking-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--booking-white);
+}
+
+.header-top-bar {
+  background-color: var(--booking-dark);
+  color: var(--booking-white);
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.header-main {
+  background-color: var(--booking-white);
+  border-bottom: 1px solid var(--booking-border);
+}
+
+.booking-logo {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.booking-logo:hover {
+  opacity: 0.8;
+}
+
+.booking-navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.booking-navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--booking-blue-light);
+}
+
+.booking-nav {
+  gap: 0.25rem;
+}
+
+.booking-header-actions {
+  flex-shrink: 0;
+}
+
+.header-dropdown .dropdown-toggle-booking {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.header-dropdown .dropdown-toggle-booking::after {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .header-top-bar {
+    display: none;
+  }
+
+  .booking-header-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--booking-border);
+  }
+
+  .booking-header-actions .header-dropdown {
+    flex: 1;
+  }
+
+  .booking-header-actions .header-dropdown .dropdown-toggle-booking {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .booking-header-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .booking-header-actions .header-dropdown {
+    width: 100%;
+  }
+
+  .booking-header-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.dropdown-menu-booking {
+  border: 1px solid var(--booking-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
+  min-width: 200px;
+  margin-top: 0.5rem;
+}
+
+.dropdown-item-booking {
+  padding: 0.625rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--booking-dark);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item-booking:hover,
+.dropdown-item-booking:focus {
+  background-color: var(--booking-blue-light);
+  color: var(--booking-blue);
+  text-decoration: none;
+}
+
+.dropdown-divider {
+  border-color: var(--booking-border);
+  margin: 0.5rem 0;
+}
